@@ -1,45 +1,25 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta charset="UTF-8">
     <title>Grunt-lama-pacos by CuiWu</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
+    <section class="page-header">
+      <h1 class="project-name">Grunt-lama-pacos</h1>
+      <h2 class="project-tagline">a happy lama pacos</h2>
+      <a href="https://github.com/CuiWu/grunt-lama-pacos" class="btn">View on GitHub</a>
+      <a href="https://github.com/CuiWu/grunt-lama-pacos/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/CuiWu/grunt-lama-pacos/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-      <header>
-        <h1>Grunt-lama-pacos</h1>
-        <p>a happy lama pacos</p>
-      </header>
-
-      <div id="banner">
-        <span id="logo"></span>
-
-        <a href="https://github.com/CuiWu/grunt-lama-pacos" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
-          <span>Downloads:</span>
-          <ul>
-            <li><a href="https://github.com/CuiWu/grunt-lama-pacos/zipball/master" class="button">ZIP</a></li>
-            <li><a href="https://github.com/CuiWu/grunt-lama-pacos/tarball/master" class="button">TAR</a></li>
-          </ul>
-        </div>
-      </div><!-- end banner -->
-
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
-      <section>
-        <h1>
+    <section class="main-content">
+      <h1>
 <a id="grunt-lama-pacos" class="anchor" href="#grunt-lama-pacos" aria-hidden="true"><span class="octicon octicon-link"></span></a>grunt-lama-pacos</h1>
 
 <blockquote>
@@ -82,18 +62,18 @@
 <a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h3>
 
 <h4>
-<a id="optionsseparator" class="anchor" href="#optionsseparator" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.separator</h4>
+<a id="optionswho" class="anchor" href="#optionswho" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.who</h4>
 
 <p>Type: <code>String</code>
-Default value: <code>',  '</code></p>
+Default value: <code>lama_pacos</code></p>
 
 <p>A string value that is used to do something with whatever.</p>
 
 <h4>
-<a id="optionspunctuation" class="anchor" href="#optionspunctuation" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.punctuation</h4>
+<a id="optionscommentsymbol" class="anchor" href="#optionscommentsymbol" aria-hidden="true"><span class="octicon octicon-link"></span></a>options.commentSymbol</h4>
 
 <p>Type: <code>String</code>
-Default value: <code>'.'</code></p>
+Default value: <code>//</code></p>
 
 <p>A string value that is used to do something else with whatever else.</p>
 
@@ -107,27 +87,11 @@ Default value: <code>'.'</code></p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-smi">grunt</span>.<span class="pl-en">initConfig</span>({
   lama_pacos<span class="pl-k">:</span> {
-    options<span class="pl-k">:</span> {},
-    files<span class="pl-k">:</span> {
-      <span class="pl-s"><span class="pl-pds">'</span>dest/default_options<span class="pl-pds">'</span></span><span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>src/testing<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>src/123<span class="pl-pds">'</span></span>],
-    },
-  },
-})</pre></div>
-
-<h4>
-<a id="custom-options" class="anchor" href="#custom-options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom Options</h4>
-
-<p>In this example, custom options are used to do something else with whatever else. So if the <code>testing</code> file has the content <code>Testing</code> and the <code>123</code> file had the content <code>1 2 3</code>, the generated result in this case would be <code>Testing: 1 2 3 !!!</code></p>
-
-<div class="highlight highlight-source-js"><pre><span class="pl-smi">grunt</span>.<span class="pl-en">initConfig</span>({
-  lama_pacos<span class="pl-k">:</span> {
     options<span class="pl-k">:</span> {
-      separator<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>: <span class="pl-pds">'</span></span>,
-      punctuation<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span> !!!<span class="pl-pds">'</span></span>,
+      <span class="pl-s"><span class="pl-pds">'</span>who<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>lama_pacos<span class="pl-pds">'</span></span>,
+      <span class="pl-s"><span class="pl-pds">'</span>commentSymbol<span class="pl-pds">'</span></span><span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>//<span class="pl-pds">'</span></span>
     },
-    files<span class="pl-k">:</span> {
-      <span class="pl-s"><span class="pl-pds">'</span>dest/default_options<span class="pl-pds">'</span></span><span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>src/testing<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>src/123<span class="pl-pds">'</span></span>],
-    },
+    dist<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>examples/*.js<span class="pl-pds">'</span></span>]
   },
 })</pre></div>
 
@@ -139,19 +103,21 @@ Default value: <code>'.'</code></p>
 <h2>
 <a id="release-history" class="anchor" href="#release-history" aria-hidden="true"><span class="octicon octicon-link"></span></a>Release History</h2>
 
-<p><em>(Nothing yet)</em></p>
+<p>2015-12-2</p>
 
 <h2>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
 
 <p>Copyright (c) 2015 Tommy Zhang. Licensed under the MIT license.</p>
-      </section>
-      <footer>
-        <p>Project maintained by <a href="https://github.com/CuiWu">CuiWu</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/CuiWu/grunt-lama-pacos">Grunt-lama-pacos</a> is maintained by <a href="https://github.com/CuiWu">CuiWu</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+
+    </section>
+
+  
   </body>
 </html>
