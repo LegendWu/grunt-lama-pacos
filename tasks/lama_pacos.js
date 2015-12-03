@@ -19,29 +19,30 @@ module.exports = function (grunt) {
 
     // Merge task-specific and/or target-specific options with these defaults.
     var options = this.options({
-        who: 'lama_pacos',
+        template: 'lama_pacos',
         commentSymbol: '//'
       }),
       duplicateCommentCheckingMap = {
         'lama_pacos': /┗┓┓┏━┳┓┏┛/
       },
       commentFilePathMap = {
-        'lama_pacos': 'lama_pacos.txt'
+        'lama_pacos': 'templates/lama_pacos.txt'
       },
-      commentFilePath = path.join(__dirname, commentFilePathMap[options.who]),
+      commentFilePath = path.join(__dirname, commentFilePathMap[options.template]),
       commentContent = grunt.file.read(commentFilePath),
-      commentLineArr = commentContent.split(grunt.util.normalizelf('\n'));
+      commentLineArr = commentContent.split('\n');
+      //grunt.util.normalizelf('\n') doesn't work on Windows 10
 
     commentLineArr = commentLineArr.map(function(commentLine){
       return options.commentSymbol + commentLine;
     });
 
-    commentContent = commentLineArr.join(grunt.util.normalizelf('\n'));
+    commentContent = commentLineArr.join('\n');
 
     // Iterate over all specified file groups.
     this.files.forEach(function (file) {
       // Concat specified files.
-      var src = file.src.filter(function (filepath) {
+      file.src.filter(function (filepath) {
         // Warn on and remove invalid source files (if nonull was set).
         if (!grunt.file.exists(filepath)) {
           grunt.log.warn('Source file "' + filepath + '" not found.');
@@ -52,15 +53,15 @@ module.exports = function (grunt) {
       }).map(function (filepath) {
         // Read file source.
         var originalFileContent = grunt.file.read(filepath);
-        var newFileContent =  commentContent + grunt.util.normalizelf('\n') + originalFileContent;
-        if(duplicateCommentCheckingMap[options.who].test(originalFileContent)){
+        var newFileContent =  commentContent + '\n' + originalFileContent;
+        if(duplicateCommentCheckingMap[options.template].test(originalFileContent)){
           return;
         }
         grunt.file.write(filepath, newFileContent);
       });
 
       // Print a success message.
-      grunt.log.writeln('File "' + file.dest + '" created.');
+      grunt.log.writeln('File "' + file.dest + '" added comment successfully.');
     });
   });
 

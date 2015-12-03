@@ -37,7 +37,7 @@ grunt.initConfig({
 
 ### Options
 
-#### options.who
+#### options.template
 Type: `String`
 Default value: `lama_pacos`
 
@@ -58,14 +58,13 @@ In this example, the default options are used to do something with whatever. So 
 grunt.initConfig({
   lama_pacos: {
     options: {
-      'who': 'lama_pacos',
+      'template': 'lama_pacos',
       'commentSymbol': '//'
     },
     dist: ['examples/*.js']
   },
 })
 ```
-
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
 

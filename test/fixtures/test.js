@@ -13,6 +13,8 @@
 //　　　　　　　　　┃　　　　　　　┣┓ 
 //　　　　　　　　　┃　　　　　　　┏┛ 
 //　　　　　　　　　┗┓┓┏━┳┓┏┛ 
-//　　　　　　　　　　┃┫┫　┃┫┫ 
+//　　　　　　　　　　┃┫┫　┃┫┫
 //　　　　　　　 　　 ┗┻┛　┗┻┛
-console.log('test2.js');
+function test(){
+	console.log('test.js');
+}

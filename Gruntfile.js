@@ -6,7 +6,7 @@
  * Licensed under the MIT license.
  */
 
-'use strict';
+'use strict'; 
 
 module.exports = function (grunt) {
   // load all npm grunt tasks
@@ -34,7 +34,7 @@ module.exports = function (grunt) {
     // Configuration to be run (and then tested).
     lama_pacos: {
       options: {
-        who: 'lama_pacos',
+        template: 'lama_pacos',
         commentSymbal: '//'
       },
       dist: ['test/fixtures/*.js']
@@ -52,7 +52,7 @@ module.exports = function (grunt) {
 
   // Whenever the "test" task is run, first clean the "tmp" dir, then run this
   // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'lama_pacos'/*, 'nodeunit'*/]);
+  grunt.registerTask('test', ['clean', 'lama_pacos', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['jshint', 'test']);
